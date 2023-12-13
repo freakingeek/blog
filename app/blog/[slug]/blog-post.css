@@ -1,0 +1,40 @@
+.blog-post {
+    margin-top: 56px;
+}
+
+.blog-post__published-at {
+    opacity: 0.5;
+}
+
+.blog-post__title {
+    margin-top: 8px;
+    font-size: 32px;
+}
+
+.blog-post__image-box {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 32px;
+    padding-top: 75%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.blog-post__image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.blog-post__content {
+    margin-bottom: 128px;
+}
+
+.blog-post__content p {
+    font-size: 16px;
+    margin-top: 32px;
+    line-height: 160%;
+}
