@@ -1,14 +1,24 @@
 import "./globals.css";
 import clsx from "clsx";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
+import Header from "@/app/components/layout/Header";
 
-const quicksand = Quicksand({ subsets: ["latin"], })
+const quicksand = Quicksand({ subsets: ["latin"] });
+
+const title = process.env.WEBSITE_TITLE || "Freakin' Geek";
+const url = process.env.WEBSITE_DOMAIN || "https://talked.dev";
 
 export const metadata: Metadata = {
-  title: "Freakin' Geek",
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  metadataBase: new URL(url),
   description: "Random tech blog on the internet!",
+  openGraph: {
+    title: title,
+  },
 };
 
 export default function RootLayout({
@@ -18,30 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(quicksand.className, 'container')}>
-        <header className="header">
-          <Link href="/">
-            <h1 className="logo">{"Freakin' Geek"}</h1>
-          </Link>
+      <body className={clsx(quicksand.className, "container", "layout")}>
+        <Header className="layout__header" />
 
-          <nav className="navigation">
-            <ul className="navigation__list">
-              <li className="navigation__item">
-                <Link href="/" className="navigation__link">home</Link>
-              </li>
-              
-              <li className="navigation__item">
-                <Link href="/blog" className="navigation__link">blog</Link>
-              </li>
-
-              <li className="navigation__item">
-                <Link href="/about" className="navigation__link">about</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        {children}
+        <main className="layout__content">{children}</main>
       </body>
     </html>
   );

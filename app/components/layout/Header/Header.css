@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+  transition: opacity 0.15s ease;
+}
+
+.navigation__item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.navigation__item:not(:hover) {
+  opacity: 0.5;
+}

@@ -28,37 +28,12 @@ body {
 .container {
   margin: 0 auto;
   max-width: 768px;
+}
 
-  /* TODO: Remove these */
+.layout__header {
   margin-top: 56px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 20px;
-}
-
-.navigation {
-
-}
-
-.navigation__list {
-  display: flex;
-}
-
-.navigation__item {
-  transition: opacity 0.15s ease;
-}
-
-.navigation__item:not(:first-child) {
-  margin-left: 40px;
-}
-
-.navigation__item:not(:hover) {
-  opacity: 0.5;
+.layout__content {
+  margin-top: 64px;
 }
