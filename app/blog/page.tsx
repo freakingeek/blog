@@ -1,7 +1,12 @@
 import "./blog.css";
+import type { Metadata } from "next";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import PostCard from "@/app/blog/[slug]/components/PostCard";
+
+export const metadata: Metadata = {
+  title: "Blog"
+}
 
 export default function Blog() {
   const posts = allPosts.sort((a, b) =>
