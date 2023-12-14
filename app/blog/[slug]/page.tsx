@@ -1,4 +1,5 @@
 import "./blog-post.css";
+import type { Metadata } from "next";
 import Mdx from "@/app/components/Mdx";
 import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
@@ -9,8 +10,17 @@ export const generateStaticParams = async () =>
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+
   if (post) {
-    return { title: post.title };
+    return {
+      title: post.title,
+      description: post.description,
+      openGraph: {
+        title: post.title,
+        images: [post.image],
+        description: post.description
+      },
+    } as Metadata;
   }
 };
 
