@@ -4,7 +4,6 @@ const { withContentlayer } = require('next-contentlayer')
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/freakingeek' : '',
 }
 
 module.exports = withContentlayer(nextConfig)
