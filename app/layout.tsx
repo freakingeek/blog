@@ -1,10 +1,10 @@
 import "./globals.css";
 import clsx from "clsx";
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Header from "@/app/components/layout/Header";
 
-const quicksand = Quicksand({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 const title = process.env.WEBSITE_TITLE || "Freakin' Geek";
 const url = process.env.WEBSITE_DOMAIN || "https://talked.dev";
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(quicksand.className, "container", "layout")}>
+      <body className={clsx(openSans.className, "container", "layout")}>
         <Header className="layout__header" />
 
         <main className="layout__content">{children}</main>
