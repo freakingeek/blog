@@ -23,3 +23,13 @@
 .navigation__item:not(:hover) {
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .logo {
+    width: 100px;
+  }
+
+  .navigation {
+    display: none;
+  }
+}

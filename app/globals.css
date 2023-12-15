@@ -41,3 +41,23 @@ body {
 .layout__content {
   margin-top: 64px;
 }
+
+@media (max-width: 768px) { 
+  .container { 
+    max-width: 540px; 
+  } 
+ 
+  .layout__header { 
+    margin-top: 32px; 
+  } 
+   
+  .layout__content { 
+    margin-top: 32px; 
+  } 
+} 
+ 
+@media (max-width: 540px) { 
+  .container { 
+    max-width: 90%; 
+  } 
+}
