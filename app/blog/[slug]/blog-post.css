@@ -82,3 +82,9 @@
 .blog-post__content strong {
   color: var(--white);
 }
+
+.blog-post__content hr {
+  opacity: 0.5;
+  margin-top: 48px;
+  border-color: var(--black);
+}
