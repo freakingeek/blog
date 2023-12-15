@@ -3,7 +3,7 @@
 }
 
 .blog-post__published-at {
-  opacity: 0.5;
+    color: var(--gray-300);
 }
 
 .blog-post__title {
@@ -37,6 +37,7 @@
   font-size: 16px;
   margin-top: 28px;
   line-height: 160%;
+  color: var(--gray-200);
 }
 
 .blog-post__content :is(h2, h3, h4, h5, h6) + p {
