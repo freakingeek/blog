@@ -1,14 +1,13 @@
 .post-card {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .post-card__image-box {
-    width: 100%;
-    height: 256px;
-    display: block;
+    flex: 1;
     overflow: hidden;
     position: relative;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 .post-card__image {

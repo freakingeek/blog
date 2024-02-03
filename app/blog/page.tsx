@@ -1,12 +1,11 @@
-import "./blog.css";
 import type { Metadata } from "next";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
-import PostCard from "@/app/blog/[slug]/components/PostCard";
+import PostsGrid from "@/app/components/PostsGrid";
 
 export const metadata: Metadata = {
-  title: "Blog"
-}
+  title: "Blog",
+};
 
 export default function Blog() {
   const posts = allPosts.sort((a, b) =>
@@ -15,11 +14,7 @@ export default function Blog() {
 
   return (
     <div className="blog">
-      <section className="posts">
-        {posts.map((post, idx) => (
-          <PostCard key={idx} {...post} className="post posts__post" />
-        ))}
-      </section>
+      <PostsGrid posts={posts} />
     </div>
   );
 }
